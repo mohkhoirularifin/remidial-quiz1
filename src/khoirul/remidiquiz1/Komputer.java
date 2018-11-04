@@ -1,5 +1,6 @@
 package khoirul.remidiquiz1;
 public class Komputer {
+    //membuat attribute yang salah satunya merelasi dari class lain
     private String merk;
     private String tipe;
     private Mouse nama;
@@ -12,6 +13,7 @@ public class Komputer {
         
     }
 
+    //membuat constructor
     public Komputer(String merk, String tipe, Mouse nama, Keyboard jenis, Cpu generasi, int harga, float diskon) {
         this.merk = merk;
         this.tipe = tipe;
@@ -22,6 +24,7 @@ public class Komputer {
         this.diskon = diskon;
     }
 
+    //membuat getter dan setter
     public String getMerk() {
         return merk;
     }
@@ -78,10 +81,13 @@ public class Komputer {
         this.diskon = diskon;
     }
 
+    //membuat set Total untuk menghitung harga bersih yang harus dibayar pelanggan
+    //setelah dipotong diskon
     public int setTotal(){
         return harga = (int) (harga * diskon);
     }
     
+    //membuat info untuk menampilkan semua yang dibutuhkan
     public String info(){
         String info = "";
         info += "Merk\t\t: " + this.merk + "\n";
