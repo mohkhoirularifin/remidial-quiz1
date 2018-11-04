@@ -1,5 +1,6 @@
 package khoirul.remidiquiz1;
 public class Keyboard {
+    //membuat attribute
     private String mrk;
     private String jenis;
     
@@ -7,11 +8,13 @@ public class Keyboard {
         
     }
 
+    //membuat constructor
     public Keyboard(String mrk, String jenis) {
         this.mrk = mrk;
         this.jenis = jenis;
     }
 
+    //membuat getter dan setter melalui nsert code
     public String getMrk() {
         return mrk;
     }
@@ -28,6 +31,7 @@ public class Keyboard {
         this.jenis = jenis;
     }
     
+    //membuat info untuk ditampilkan di class komputer
     public String info(){
         String info = "";
         info += this.mrk + "\n";
