@@ -1,5 +1,6 @@
 package khoirul.remidiquiz1;
 public class Cpu {
+    //membuat attribute
     private String processor;
     private String generasi;
     
@@ -7,11 +8,13 @@ public class Cpu {
         
     }
 
+    //membuat constructor
     public Cpu(String processor, String generasi) {
         this.processor = processor;
         this.generasi = generasi;
     }
 
+    //membuat getter dan setter melalui insert code
     public String getGenerasi() {
         return generasi;
     }
@@ -29,6 +32,7 @@ public class Cpu {
         this.processor = processor;
     }
     
+    //membuat info untuk ditampilkan di class komputer
     public String info(){
         String info = "";
         info += this.processor + "\n";
