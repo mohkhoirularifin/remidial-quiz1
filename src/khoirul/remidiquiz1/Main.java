@@ -6,7 +6,7 @@ public class Main {
         Cpu processor = new Cpu ("Intel Core i9");
         Komputer komputer = new Komputer ("ASUS AIO","Gaming PC", nama, jenis, processor, 35000000);
         
-        System.out.println("\t  Khoirul Comp. ");
+        System.out.println("\tKhoirul Comp. ");
         System.out.println(komputer.info());
     }
     
