@@ -1,14 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package khoirul.remidiquiz1;
-
-/**
- *
- * @author KINTUL
- */
 public class Keyboard {
+    private String mrk;
+    private String jenis;
     
+    public Keyboard(){
+        
+    }
+
+    public Keyboard(String mrk, String jenis) {
+        this.mrk = mrk;
+        this.jenis = jenis;
+    }
+
+    public String getMrk() {
+        return mrk;
+    }
+
+    public void setMrk(String mrk) {
+        this.mrk = mrk;
+    }
+
+    public String getJenis() {
+        return jenis;
+    }
+
+    public void setJenis(String jenis) {
+        this.jenis = jenis;
+    }
+    
+    public String info(){
+        String info = "";
+        info += this.mrk + "\n";
+        info += "Jenis\t\t: " + this.jenis;
+        return info;
+    }
 }
