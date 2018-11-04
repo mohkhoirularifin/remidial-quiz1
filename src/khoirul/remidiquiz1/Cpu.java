@@ -1,15 +1,26 @@
 package khoirul.remidiquiz1;
 public class Cpu {
     private String processor;
+    private String generasi;
     
     public Cpu(){
         
     }
 
-    public Cpu(String processor) {
+    public Cpu(String processor, String generasi) {
         this.processor = processor;
+        this.generasi = generasi;
     }
 
+    public String getGenerasi() {
+        return generasi;
+    }
+
+    public void setGenerasi(String generasi) {
+        this.generasi = generasi;
+    }
+
+    
     public String getProcessor() {
         return processor;
     }
@@ -20,7 +31,8 @@ public class Cpu {
     
     public String info(){
         String info = "";
-        info += this.processor;
+        info += this.processor + "\n";
+        info += "Generasi\t: " + this.generasi;
         return info;
     }
 }
