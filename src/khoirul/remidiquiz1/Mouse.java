@@ -1,5 +1,6 @@
 package khoirul.remidiquiz1;
 public class Mouse {
+    //membuat attribute
     private String nama;
     private String produk;
     
@@ -7,11 +8,13 @@ public class Mouse {
         
     }
 
+    //membuat constructor
     public Mouse(String nama, String produk) {
         this.nama = nama;
         this.produk = produk;
     }
 
+    //membuat getter dan setter
     public String getNama() {
         return nama;
     }
@@ -28,6 +31,7 @@ public class Mouse {
         this.produk = produk;
     }
     
+    //membuat info
     public String info(){
         String info = "";
         info += this.nama + "\n";
