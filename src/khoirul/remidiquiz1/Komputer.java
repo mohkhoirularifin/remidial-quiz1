@@ -4,20 +4,22 @@ public class Komputer {
     private String tipe;
     private Mouse nama;
     private Keyboard jenis;
-    private Cpu processor;
+    private Cpu generasi;
     private int harga;
+    private float diskon;
     
     public Komputer(){
         
     }
 
-    public Komputer(String merk, String tipe, Mouse nama, Keyboard jenis, Cpu processor, int harga) {
+    public Komputer(String merk, String tipe, Mouse nama, Keyboard jenis, Cpu generasi, int harga, float diskon) {
         this.merk = merk;
         this.tipe = tipe;
         this.nama = nama;
         this.jenis = jenis;
-        this.processor = processor;
+        this.generasi = generasi;
         this.harga = harga;
+        this.diskon = diskon;
     }
 
     public String getMerk() {
@@ -52,12 +54,12 @@ public class Komputer {
         this.jenis = jenis;
     }
 
-    public Cpu getProcessor() {
-        return processor;
+    public Cpu getGenerasi() {
+        return generasi;
     }
 
-    public void setProcessor(Cpu processor) {
-        this.processor = processor;
+    public void setGenerasi(Cpu generasi) {
+        this.generasi = generasi;
     }
 
     public int getHarga() {
@@ -67,6 +69,18 @@ public class Komputer {
     public void setHarga(int harga) {
         this.harga = harga;
     }
+
+    public float getDiskon() {
+        return diskon;
+    }
+
+    public void setDiskon(float diskon) {
+        this.diskon = diskon;
+    }
+
+    public int setTotal(){
+        return harga = (int) (harga * diskon);
+    }
     
     public String info(){
         String info = "";
@@ -74,8 +88,10 @@ public class Komputer {
         info += "Tipe\t\t: " + this.tipe + "\n";
         info += "Mouse\t\t: " + this.nama.info() + "\n";
         info += "Keyboard\t: " + this.jenis.info() + "\n";
-        info += "Processor\t: " + this.processor.info() + "\n";
-        info += "Harga\t\t: Rp." + this.harga + "\n";
+        info += "Processor\t: " + this.generasi.info() + "\n";
+        info += "Harga\t\t: Rp. " + this.harga + "\n";
+        info += "Diskon\t\t: " + this.getDiskon() + "%\n";
+        info += "Harga Bersih\t: Rp. " + this.setTotal();
         return info;
     }
 }
